@@ -18,6 +18,18 @@ beforeEach(() => {
 
 
 
+Given('I navigate to the authentication page', async () => {
+    landingPage.navigateToTheLoginPage();
+})
+
+
+
+Given('I login as {string} with {string}', (email, password) => {
+    loginPage.login(email, password);
+})
+
+
+
 Given('I search for {string}', item => {
     landingPage.searchFor(item);
 })
@@ -84,4 +96,10 @@ Then('the {string} message is disaplayed', expectedMessage => {
 
 Then('the total price is {string}', expectedTotal => {
     cartSummaryPage.verifyTotalPriceIs(expectedTotal);
+})
+
+
+
+Then('the {string} Order Step is loaded inside the login page', orderStep => {
+    loginPage.verifyOrderStepIsLoaded(orderStep)
 })

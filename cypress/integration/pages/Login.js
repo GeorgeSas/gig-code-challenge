@@ -14,6 +14,19 @@ export default class Login {
     paymentStep = '#step_end > span';
 
 
+    login(email, password) {
+        cy
+            .get(this.email)
+            .type(email);
+        cy
+            .get(this.password)
+            .type(password);
+        cy
+            .get(this.signIn)
+            .click();
+    }
+
+
     verifyTheActualErrorIs(expectedErrorMessage) {
 
         cy.get(this.errorMessage)
@@ -54,6 +67,28 @@ export default class Login {
             .get(this.paymentStep)
             .should('exist')
             .should('contain.text', '05. Payment');
+    }
+
+
+    verifyOrderStepIsLoaded(orderStep) {
+
+        switch (orderStep) {
+            case 'Address':
+                cy
+                    .get(this.addressStep)
+                    .should('exist')
+                    .should('contain.text', '03. Address');
+                break;
+            case 'Payment':
+                cy
+                    .get(this.paymentStep)
+                    .should('exist')
+                    .should('contain.text', '05. Payment');
+                break;
+            default:
+                console.log('Invalid option.');
+                break;
+        }
     }
 
 }
