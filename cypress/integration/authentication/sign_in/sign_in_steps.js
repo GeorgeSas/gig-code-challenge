@@ -35,3 +35,8 @@ When('I click on the Sign In button', () => {
 Then('I am logged in as {string}', user => {
     accountPage.verifyUserIsLoggedIn(user);
 })
+
+
+Then('the {string} warning is triggered and displayed', expectedErrorMessage => {
+    loginPage.verifyTheActualErrorIs(expectedErrorMessage);
+})

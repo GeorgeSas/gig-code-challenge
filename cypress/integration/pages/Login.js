@@ -8,4 +8,15 @@ export default class Login {
     errorMessage = 'ol > li';
 
 
+    verifyTheActualErrorIs(expectedErrorMessage) {
+
+        cy.get(this.errorMessage)
+            .invoke('text')
+            .then(txt => {
+                expect(txt).to.equal(expectedErrorMessage);
+
+            })
+    }
+
+
 }
