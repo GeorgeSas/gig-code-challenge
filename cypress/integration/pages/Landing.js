@@ -4,4 +4,10 @@ export default class Landing {
     searchField = '#search_query_top';
     searchButton = '#searchbox > .btn';
 
+    navigateToTheLoginPage() {
+        cy
+            .get(this.loginButton)
+            .click();
+    }
+
 }
