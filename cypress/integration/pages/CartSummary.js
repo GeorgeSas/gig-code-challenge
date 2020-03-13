@@ -35,4 +35,25 @@ export default class CartSummary {
             .click()
     }
 
+
+    clearShoppingCart() {
+        cy
+            .get(this.trashIcons)
+            .each(icons => {
+                icons.click();
+            })
+    }
+
+
+    verifyTheActualMessageIs(expectedMessage) {
+
+        cy
+            .get(this.alertMSg)
+            .invoke('text')
+            .then(txt => {
+                expect(txt).to.equal(expectedMessage);
+
+            })
+    }
+
 }
