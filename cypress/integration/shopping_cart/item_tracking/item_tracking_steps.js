@@ -79,3 +79,9 @@ Then('the authentication page is loaded', () => {
 Then('the {string} message is disaplayed', expectedMessage => {
     cartSummaryPage.verifyTheActualMessageIs(expectedMessage);
 })
+
+
+
+Then('the total price is {string}', expectedTotal => {
+    cartSummaryPage.verifyTotalPriceIs(expectedTotal);
+})

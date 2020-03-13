@@ -56,4 +56,14 @@ export default class CartSummary {
             })
     }
 
+
+    verifyTotalPriceIs(expectedTotal) {
+        cy
+            .get(this.totalPrice)
+            .invoke('text')
+            .then(txt => {
+                expect(txt).to.equal(expectedTotal);
+            })
+    }
+
 }
