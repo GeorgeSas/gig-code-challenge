@@ -10,4 +10,15 @@ export default class Landing {
             .click();
     }
 
+
+    searchFor(item) {
+        cy
+            .get(this.searchField)
+            .type(item);
+        cy
+            .get(this.searchButton)
+            .click();
+    }
+
+
 }
