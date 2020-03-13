@@ -1,0 +1,7 @@
+package-lock.json
+node_modules
+screenshots
+videos
+out.js
+examples/*/cypress/logs
+snapshots.js
