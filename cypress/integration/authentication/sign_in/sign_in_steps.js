@@ -7,6 +7,11 @@ let loginPage = new Login();
 let accountPage = new Account();
 
 
+beforeEach(() => {
+    cy.visit('http://automationpractice.com/index.php?')
+})
+
+
 Given('I navigate to the authentication page', async () => {
     landingPage.navigateToTheLoginPage();
 })
