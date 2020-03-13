@@ -1,9 +1,13 @@
 import Landing from "../../Pages/Landing";
 import ItemList from "../../Pages/ItemList";
+import CartSummary from "../../Pages/CartSummary";
+import Login from "../../Pages/Login";
 
 
 let landingPage = new Landing();
 let itemListPage = new ItemList();
+let cartSummaryPage = new CartSummary();
+let loginPage = new Login();
 
 
 beforeEach(() => {
