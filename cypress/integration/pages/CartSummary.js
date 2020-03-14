@@ -17,7 +17,7 @@ export default class CartSummary {
             .clear()
             .type(qty)
             .then( () => {
-                cy.wait(2000);
+                cy.wait(3000);
             })
     }
 
