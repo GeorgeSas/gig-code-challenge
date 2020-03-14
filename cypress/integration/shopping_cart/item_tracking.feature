@@ -1,3 +1,4 @@
+@ShoppingCart
 Feature: Shopping Car Item Tracking
 
 
@@ -10,6 +11,7 @@ Feature: Shopping Car Item Tracking
 
     ################## AS AN ANONYMOUS USER ####################
 
+    @Smoke
     Scenario: Add 2 items to cart, remove 1, change quantity and checkout #1
         Given I search for 'black dress'
         And I add item number '1' to the cart
@@ -21,7 +23,7 @@ Feature: Shopping Car Item Tracking
         Then the authentication page is loaded
 
 
-
+    @Regression
     Scenario: Add 2 items to cart, remove 1, change quantity and checkout #2
         Given I search for 'black dress'
         And I add item number '3' to the cart
@@ -33,7 +35,7 @@ Feature: Shopping Car Item Tracking
         Then the authentication page is loaded
 
 
-
+    @Regression
     Scenario: Add 2 items to cart, checkout and remove both
         Given I search for 'black dress'
         And I add item number '1' to the cart
@@ -43,7 +45,7 @@ Feature: Shopping Car Item Tracking
         Then the 'Your shopping cart is empty.' message is disaplayed
 
 
-
+    @Regression
     Scenario: Add 1 item to cart, change quantity and check total price
         Given I search for 'black dress'
         And I add item number '2' to the cart
@@ -52,7 +54,7 @@ Feature: Shopping Car Item Tracking
         Then the total price is '$50,992.00'
 
 
-
+    @Regression
     Scenario: Add 1 item to cart and change quantity to 0
         Given I search for 'black dress'
         And I add item number '1' to the cart
@@ -64,6 +66,7 @@ Feature: Shopping Car Item Tracking
 
     ################### AS AN REGISTERD USER ####################
 
+    @Smoke
     Scenario: Add 2 items to cart, remove 1, change quantity and checkout as registered user
         Given I navigate to the authentication page
         And I login as 'georgian.sas@gmail.com' with 'Avalon1234))))'

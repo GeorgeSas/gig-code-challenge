@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-gui:all": "npx cypress open",
-    "test-headless:all": "npx cypress run --spec **/*.feature",
+    "test:open": "npx cypress open",
+    "test:run": "npx cypress run",
+    "test:tags": "npx cypress run -e",
     "test-headless:authentication": "npx cypress run --spec **/sign_in.feature",
     "test-headless:shopping": "npx cypress run --spec **/item_tracking.feature"
   },
