@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-gui:all": "npx cypress open",
+    "test-headless:all": "npx cypress run --spec **/*.feature",
+    "test-headless:authentication": "npx cypress run --spec **/sign_in.feature",
+    "test-headless:shopping": "npx cypress run --spec **/item_tracking.feature"
   },
   "keywords": [],
   "author": "",
