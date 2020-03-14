@@ -9,7 +9,7 @@ structure: Page Object Model
 language: JS
 ```
 
-### How to get the project and run tests locally:
+### Clone and run tests locally:
 
 ```sh
 # Clone project
