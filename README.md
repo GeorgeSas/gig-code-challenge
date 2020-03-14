@@ -1,5 +1,13 @@
 # gig-code-challenge
 
+### Project:
+
+```sh
+framework: Cypress
+tool: Cucumber
+structure: Page Object Model
+language: JS
+```
 
 ### How to get the project and run tests locally:
 
