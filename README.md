@@ -1,7 +1,7 @@
 # gig-code-challenge
 
 
-### How to get project and run tests locally:
+### How to get the project and run tests locally:
 
 ```sh
 # Clone project
